@@ -1,0 +1,2 @@
+yum install java-17-amazon-corretto -y
+wget https://download.sonatype.com/nexus/3/nexus-3.91.1-04-linux-x86_64.tar.gz
