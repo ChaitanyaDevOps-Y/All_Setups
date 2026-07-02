@@ -1,0 +1,13 @@
+sudo dnf install maven -y
+
+sudo dnf install java-17-amazon-corretto-devel -y
+
+wget https://dlcdn.apache.org/maven/maven-3/3.9.15/binaries/apache-maven-3.9.15-bin.tar.gz
+sudo tar xzvf apache-maven-3.9.15-bin.tar.gz -C /opt
+
+echo "export M2_HOME=/opt/apache-maven-3.9.15" | sudo tee /etc/profile.d/maven.sh
+echo "export PATH=\$M2_HOME/bin:\$PATH" | sudo tee -a /etc/profile.d/maven.sh
+source /etc/profile.d/maven.sh
+
+
+mvn -version
